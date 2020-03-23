@@ -64,7 +64,7 @@ int main()
     string tray_num;		/* tray_num=tray number */
     string cus_id;		/* cus_id=customer Id */
     string cookie_type;		/* cookie_type=cookie type */
-    vector<pair<int,pair<int,int>>> info;   /* for storing information of each cookie separately */
+    vector<pair<int,pair<int,int> > > info;   /* for storing information of each cookie separately */
 
     cin >> sof;
     
@@ -92,10 +92,10 @@ int main()
     
     int given_cus_id;		  /* given customer id */
     int given_cookie_type;        /* given cookie type */
-    cin>>given_cus_id>>given_cookie_type;
+    cin >> given_cus_id >> given_cookie_type;
     
     /* loop to check for given_cus_id and given_cookie_type in vector info */
-    for( ;i<len;i++){
+    for( ; i<len; i++){
         if(info[i].second.first == given_cus_id && info[i].second.second == given_cookie_type){
 	     req_tray_num = info[i].first;
 	     break;
